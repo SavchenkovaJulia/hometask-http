@@ -1,0 +1,11 @@
+.container{
+    margin: 0 auto;
+}
+
+h1{
+text-align: center;
+}
+.img{
+    weight: 250px;
+    height: 200px;
+}
