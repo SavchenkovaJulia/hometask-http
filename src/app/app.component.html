@@ -1,41 +1,17 @@
-<div class="container">
-<h1> Top news</h1>
-<ul>
-  <li *ngFor="let links of news.articles">
-      {{links.description}}
-      <br>
-      {{links.url}}
-      <br>
-      {{links.title}}
-      <br>
-      <img  class="img" [src]="links.urlToImage">
-
-  </li>
-</ul>
-</div>
-<div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="wrap">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Top 20 news</h1>
+          <p class="lead">We collect the most important information for today. Keep abreast of developments.Stay informed.</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
+    
+<div class="card" style="width: 30rem;" *ngFor="let links of news.articles">
+  <img class="card-img-top" [src]="links.urlToImage" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> {{links.title}}</h5>
+    <p class="card-text">{{links.description}}</p>
+    <a href="{{links.url}}" class="btn btn-primary">Read</a>
   </div>
+</div>
+</div>

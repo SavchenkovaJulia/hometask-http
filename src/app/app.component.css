@@ -1,11 +1,12 @@
-.container{
+.wrap{
     margin: 0 auto;
 }
-
-h1{
-text-align: center;
+.card{
+    margin: 0 auto 30px auto;
 }
-.img{
-    weight: 250px;
-    height: 200px;
+.card-img-top {
+    max-height: 300px;
+}
+.lead, h1{
+text-align: center;
 }
